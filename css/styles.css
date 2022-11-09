@@ -429,16 +429,40 @@ body {
   justify-content: center;
 }
 
-.modal-polici {
+.input-check {
   margin-right: 8.38px;
 }
 
-.label-polici {
+.check-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
+  display: flex;
+  align-items: center;
+}
+
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 7px;
+}
+
+.input-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  fill: var(--primary-text-color);
+}
+
+.input-check:focus + .check-text span {
+  border-color: var(--accent-color);
 }
 
 .polici-link {
@@ -777,6 +801,7 @@ body {
 .container-footer {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer-soc-address {
